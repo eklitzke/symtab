@@ -7,7 +7,7 @@ int main(int argc, char **argv) {
     fprintf(stderr, "error in dlopen: %s\n", dlerror());
     return 1;
   }
-  void *sym = dlsym(handle, "hello");
+  void *sym = dlsym(handle, "foo");
   if (sym == NULL) {
     fprintf(stderr, "failed to dlsym: %s\n", dlerror());
     return 1;
